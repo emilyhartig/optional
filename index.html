@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="index.js" type="text/javascript"></script>
+
+		<link rel="stylesheet" href="index.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+	</head>
+
+	<body>
+		<h2>Simple PoC for t.me/gamebot games.</h2>
+		<div class="container">
+			<label for="link"><b>Link</b></label>
+			<input id="a" type="text" placeholder="Paste the link" name="link" required>
+
+			<label for="neededScore"><b>Needed score</b></label>
+			<input id="b" type="text" placeholder="Put score that you need" name="neededScore" required type="number">
+			
+			<button onclick="prepareEverything()">Try</button>
+		</div>
+	  
+		<div class="container">
+			<label for="tgShareLink"><b>Share link</b></label>
+			<input id="c" name="tgShareLink" readonly>
+			<div style="display: flex;">
+				<button style="margin-right: 10px;" onclick="generateShareLink()">Generate</button>
+				<button style="margin-right: 10px;" onclick="copyValue__(1)">Copy</button>
+				<button onclick="openShareLink()">Open</button>
+			</div>
+		</div>
+
+		<div class="container">
+			<textarea id="d" rows="14" readonly></textarea>
+			<div style="display: flex;">
+				<button onclick="generateFetch()" style="margin-right: 10px;">Generate direct fetch</button>
+				<button onclick="copyValue__(2)">Copy</button>
+			</div>
+		</div>
+	</body>
+</html>
+
